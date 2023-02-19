@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerSettings))]
+[RequireComponent(typeof(PlayerStatus))]
 public class PlayerMovement : MonoBehaviour
 {
-    PlayerSettings playerSettings;
+    PlayerStatus playerStatus;
     public LayerMask layermask;
 
     void Awake()
     {
-        playerSettings = GetComponent<PlayerSettings>();
+        playerStatus = GetComponent<PlayerStatus>();
     }
 
     void OnEnable()
@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     void DoMove(Vector2 input)
     {
-        var inputMove = input * Time.deltaTime * playerSettings.speed;
-        playerSettings.characterController.Move( new Vector3(inputMove.x, 0, inputMove.y) );
+        var inputMove = input * Time.deltaTime * playerStatus.Speed;
+        playerStatus.CharacterController.Move( new Vector3(inputMove.x, 0, inputMove.y) );
     }
 
     void DoRotate(Vector2 mousePosition)

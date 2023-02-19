@@ -2552,6 +2552,7 @@ GameObject:
   - component: {fileID: 575791780}
   - component: {fileID: 575791779}
   - component: {fileID: 575791782}
+  - component: {fileID: 4890489230837342788}
   - component: {fileID: 575791783}
   - component: {fileID: 575791784}
   - component: {fileID: 575791778}
@@ -2669,6 +2670,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4890489230837342788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884102019447498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b476caafbe0ff45b48b922242cde4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!114 &575791783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2681,12 +2695,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be2e82724e30d24385eae8e5b179697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 357303983139950980, guid: 550a9ab7b150ae6449adcab2ea357f4b, type: 3}
-  shoot: {fileID: 0}
-  pointerPosition: {fileID: 0}
-  characterController: {fileID: 0}
-  animator: {fileID: 0}
-  speed: 4.5
+  Movement: {fileID: 0}
+  Shoot: {fileID: 0}
+  PointerPosition: {fileID: 0}
+  CharacterController: {fileID: 0}
+  Animator: {fileID: 0}
+  Speed: 2
+  IsAlive: 1
 --- !u!114 &575791784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2711,6 +2726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db1292c8d73ab84a97e7b862ee456c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &575791785
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,13 +1,13 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerSettings))]
+[RequireComponent(typeof(PlayerStatus))]
 public class PlayerAnimation : MonoBehaviour
 {
-    PlayerSettings playerSettings;
+    PlayerStatus playerStatus;
 
     void Awake()
     {
-        playerSettings = GetComponent<PlayerSettings>();
+        playerStatus = GetComponent<PlayerStatus>();
     }
 
     void OnEnable()
@@ -23,6 +23,6 @@ public class PlayerAnimation : MonoBehaviour
     void DoMove(Vector2 input)
     {
         var speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
-        playerSettings.animator.SetFloat(Constants.Get.MOVE_SPEED, Mathf.Clamp(speed, 0, 1));
+        playerStatus.Animator.SetFloat(Constants.Get.MOVE_SPEED, Mathf.Clamp(speed, 0, 1));
     }
 }
