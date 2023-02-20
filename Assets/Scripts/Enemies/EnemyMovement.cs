@@ -1,32 +1,38 @@
-using Microsoft.VisualBasic;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(EnemySettings))]
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : CharacterMovementBase
 {
+    [SerializeField]
+    private float _stopDistance;
     private NavMeshAgent _navMesh;
-    private Animator _animator;
 
-    void Awake()
-    {
-        _navMesh = GetComponent<NavMeshAgent>();
-        _animator = GetComponent<Animator>();
+    protected override void Awake(){
+        base.Awake();
+        this._navMesh = GetComponent<NavMeshAgent>();
+
+        if(this._navMesh){
+            this._navMesh.speed = this._speed;
+            this._navMesh.stoppingDistance = this._stopDistance;
+        }
     }
 
-    void FixedUpdate ()
-    {
+    void FixedUpdate (){
         var playerPosition = PlayerStatus.Position;
-        DoMove(playerPosition);
-        LookToTarget(playerPosition);
+        var position = new Vector2(playerPosition.x, playerPosition.z);
+        DoMove(position);
+        LookAtTarget(position);
     }
 
-    void DoMove(Vector3 targetPosition){
-        _navMesh.destination = targetPosition;
-        _animator.SetFloat(Constants.Get.MOVE_SPEED, _navMesh.velocity.magnitude);
+    public override void DoMove(Vector2 targetPosition){
+        var position = new Vector3(targetPosition.x, 0, targetPosition.y);
+        this._navMesh.destination = position;
+        this._animator.SetFloat(Constants.Get.MOVE_SPEED, _navMesh.velocity.magnitude);
     }
 
-    void LookToTarget(Vector3 targetPosition){
-        transform.LookAt(targetPosition);
+    public override void LookAtTarget(Vector2 targetPosition){
+        var position = new Vector3(targetPosition.x, 0, targetPosition.y);
+        transform.LookAt(position);
     }
 }
