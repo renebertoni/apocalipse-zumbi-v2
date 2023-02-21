@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-    GameObject gameOver;
+    GameObject _gameOver;
 
     void Awake()
     {
-        gameOver = GameObject.Find(Constants.Get.GAME_OVER_BACKGROUND);
-        gameOver.SetActive(false);
+        _gameOver = GameObject.Find(Constants.Get.GAME_OVER_BACKGROUND);
+        _gameOver.SetActive(false);
     }
 
     void OnEnable()
@@ -21,6 +21,6 @@ public class UIHandler : MonoBehaviour
 
     void DoGameOver()
     {
-        gameOver.SetActive(true);
+        _gameOver.SetActive(true);
     }
 }

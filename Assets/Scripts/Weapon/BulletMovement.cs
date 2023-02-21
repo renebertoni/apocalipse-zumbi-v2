@@ -4,22 +4,19 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField]
-    float speed = 10;
-    Collider bulletCollider;
-    AudioSource audioSource;
-    Rigidbody bulletRigidbody;
-    MeshRenderer mesh;
+    float _speed;
+    AudioSource _audioSource;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.Play();
         StartCoroutine(DestroyBullet());
     }
 
     void FixedUpdate()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+        transform.Translate(transform.forward * _speed * Time.deltaTime, Space.World);
     }
     
     void OnCollisionEnter(Collision other)
@@ -31,7 +28,7 @@ public class BulletMovement : MonoBehaviour
 
     IEnumerator DestroyBullet()
     {
-        yield return new WaitUntil(() => !audioSource.isPlaying );
+        yield return new WaitUntil(() => !_audioSource.isPlaying );
         Destroy(this.gameObject);
     }
 }

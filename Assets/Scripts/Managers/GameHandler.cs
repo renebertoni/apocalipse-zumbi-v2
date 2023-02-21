@@ -6,7 +6,7 @@ public class GameHandler : MonoBehaviour
 {
     public static Action GameOver;
 
-    private void Start()
+    void Start()
     {
         Time.timeScale = 1;
     }

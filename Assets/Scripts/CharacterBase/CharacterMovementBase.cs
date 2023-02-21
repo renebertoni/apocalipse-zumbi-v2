@@ -7,7 +7,8 @@ public class CharacterMovementBase : MonoBehaviour, IMovement
     protected Animator Animator;
     protected CharacterController CharacterController;
 
-    protected virtual void Awake(){
+    protected virtual void Awake()
+    {
         Animator = GetComponent<Animator>();
         CharacterController = GetComponent<CharacterController>();
     }

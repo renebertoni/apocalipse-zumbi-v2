@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class BloodParticle : MonoBehaviour
 {
-    ParticleSystem bloodParticle;
+    ParticleSystem _bloodParticle;
 
     void Start()
     {
-        bloodParticle = GetComponent<ParticleSystem>();
+        _bloodParticle = GetComponent<ParticleSystem>();
     }
 
     void Update()
     {
-        if(!bloodParticle.IsAlive()) 
-            Destroy(this.gameObject);
+        if(!_bloodParticle.IsAlive()) Destroy(this.gameObject);
     }
 }

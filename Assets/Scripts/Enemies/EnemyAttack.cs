@@ -6,47 +6,54 @@ using System.Collections;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource _audioAttack;
+    AudioSource _audioAttack;
     [SerializeField]
-    private LayerMask _layerMask;
-    private NavMeshAgent _navMeshAgent;
-    private Animator _animator;
-    private bool _canHit;
+    LayerMask _layerMask;
+    NavMeshAgent _navMeshAgent;
+    Animator _animator;
+    bool _canHit;
 
     public static Action<int> Hit;
 
-    void Awake(){
+    void Awake()
+    {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         NearTheTarget();
         _animator.SetBool(Constants.Get.ATTACK, _canHit);
     }
 
-    public void Attack(){
+    public void Attack()
+    {
         _audioAttack.Play();
 
         StartCoroutine(IsAttacking(true, 0f));
         StartCoroutine(IsAttacking(false, 1f));
     }
 
-    private void NearTheTarget(){
+    void NearTheTarget()
+    {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward, 1f, _layerMask);
         _canHit = hitColliders.Length > 0;
     }
 
-    private void OnDrawGizmos() {
+    void OnDrawGizmos()
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position + transform.forward, 1f);
     }
 
-    public void DoHit(){
+    public void DoHit()
+    {
         if(_canHit) Hit?.Invoke(20);
     }
 
-    IEnumerator IsAttacking(bool status, float timeToWait){
+    IEnumerator IsAttacking(bool status, float timeToWait)
+    {
         yield return new WaitForSeconds(timeToWait);
         _navMeshAgent.isStopped = status;
     }

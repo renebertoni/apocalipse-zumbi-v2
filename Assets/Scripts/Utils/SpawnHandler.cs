@@ -3,34 +3,40 @@ using UnityEngine;
 public class SpawnHandler : MonoBehaviour
 {
     [SerializeField]
-    private int _maxEnemies;
+    int _maxEnemies;
 
     public static int MaxEnemies;
     public static int EnemyCount = 0;
 
-    private void Start(){
+    void Start()
+    {
         MaxEnemies = _maxEnemies;
     }
 
-    private void OnEnable(){
+    void OnEnable()
+    {
         EnemyHealth.EnemySpawned += OnEnemySpawned;
         EnemyHealth.EnemyDead += OnEnemyDead;
     }
 
-    private void OnDisable(){
+    void OnDisable()
+    {
         EnemyHealth.EnemySpawned -= OnEnemySpawned;
         EnemyHealth.EnemyDead -= OnEnemyDead;
     }
 
-    private void OnEnemySpawned(){
+    void OnEnemySpawned()
+    {
         EnemyCount++;
     }
 
-    private void OnEnemyDead(){
+    void OnEnemyDead()
+    {
         EnemyCount--;
     }
 
-    public static bool CanSpawnEnemy(){
+    public static bool CanSpawnEnemy()
+    {
         return EnemyCount <= MaxEnemies;
     }
 }

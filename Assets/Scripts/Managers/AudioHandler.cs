@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class AudioHandler : MonoBehaviour
 {
-    List<AudioSource> audioSources = new List<AudioSource>();
+    List<AudioSource> _audioSources = new List<AudioSource>();
 
     void OnEnable()
     {
         EnemyHealth.InsertAudio += OnInsertAudio;
         GameHandler.GameOver += DoGameOver;
     }
+
     void OnDisable()
     {
         EnemyHealth.InsertAudio -= OnInsertAudio;
@@ -18,25 +19,25 @@ public class AudioHandler : MonoBehaviour
 
     void OnInsertAudio(AudioSource audioSource)
     {
-        if(!audioSources.Contains(audioSource))
+        if(!_audioSources.Contains(audioSource))
         {
-            audioSources.Add(audioSource);
+            _audioSources.Add(audioSource);
         }
         else
         {
-            audioSources.Remove(audioSource);
+            _audioSources.Remove(audioSource);
             ClearVoidsFromList();
         }
     }
 
     void ClearVoidsFromList()
     {
-        audioSources.RemoveAll(item => !item);
+        _audioSources.RemoveAll(item => !item);
     }
 
     void DoGameOver()
     {
-        foreach (var item in audioSources)
+        foreach (var item in _audioSources)
         {
             item.Stop();
         }

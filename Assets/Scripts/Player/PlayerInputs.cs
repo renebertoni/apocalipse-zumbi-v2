@@ -11,25 +11,30 @@ public class PlayerInputs : MonoBehaviour
     public static Action<Vector2> Rotate;
 
     public InputActionReference Movement, Shoot, PointerPosition;
-    private PlayerHealth _playerHealth;
+    PlayerHealth _playerHealth;
 
-    private void Awake(){
+    void Awake()
+    {
         _playerHealth = GetComponent<PlayerHealth>();
     }
 
-    private void OnEnable(){
+    void OnEnable()
+    {
         Shoot.action.performed += LeftMouseClick;
     }
 
-    private void OnDisable(){
+    void OnDisable()
+    {
         Shoot.action.performed -= LeftMouseClick;
     }
 
-    private void FixedUpdate(){
+    void FixedUpdate()
+    {
         ReadInputs();
     }
 
-    private void ReadInputs(){
+    void ReadInputs()
+    {
         var inputDirection = Movement.action.ReadValue<Vector2>();
         var inputRotation = PointerPosition.action.ReadValue<Vector2>();
         
@@ -37,10 +42,9 @@ public class PlayerInputs : MonoBehaviour
         Move?.Invoke(inputDirection.normalized);
     }
 
-    private void LeftMouseClick(InputAction.CallbackContext obj){
-        if(_playerHealth.IsAlive)
-            OnShoot?.Invoke();
-        else
-            DontShoot?.Invoke();// TODO REMOVER ISSO E REINICIAR POR BOTAO
+    void LeftMouseClick(InputAction.CallbackContext obj)
+    {
+        if(_playerHealth.IsAlive) OnShoot?.Invoke();
+        else DontShoot?.Invoke();// TODO REMOVER ISSO E REINICIAR POR BOTAO
     }
 }

@@ -4,32 +4,33 @@ using System.Collections;
 public class SpawnPoints : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 timeToSpawn;
+    Vector2 _timeToSpawn;
     [SerializeField]
-    private SpawnType spawnType;
-    private GameObject objetcToSpawn;
-    private float time;
+    SpawnType _spawnType;
+    GameObject _objetcToSpawn;
+    float _time;
 
     void Start()
     {
-        objetcToSpawn = ChooseObject();
+        _objetcToSpawn = ChooseObject();
         StartCoroutine(SpawnController());
     }
 
     IEnumerator SpawnController()
     {
-        time = Random.Range(timeToSpawn.x, timeToSpawn.y);
-        yield return new WaitForSeconds(time);
+        _time = Random.Range(_timeToSpawn.x, _timeToSpawn.y);
+        yield return new WaitForSeconds(_time);
         if(SpawnHandler.CanSpawnEnemy())
         {
-            Instantiate(objetcToSpawn, transform.position, Quaternion.identity);
+            Instantiate(_objetcToSpawn, transform.position, Quaternion.identity);
         }
         StartCoroutine(SpawnController());
     }
 
     GameObject ChooseObject()
     {
-        switch(spawnType){
+        switch(_spawnType)
+        {
             case SpawnType.Enemy:
                 return Resources.Load<GameObject>(Constants.Get.ENEMY);
             default:

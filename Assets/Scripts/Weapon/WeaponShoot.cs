@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class WeaponShoot : MonoBehaviour
 {
-    Transform bulletPoint;
-    GameObject bullet;
+    Transform _bulletPoint;
+    GameObject _bullet;
     
     void Start()
     {
-        bulletPoint = transform.Find(Constants.Get.BULLET_POSITION);
-        bullet = Resources.Load<GameObject>(Constants.Get.BULLET);
+        _bulletPoint = transform.Find(Constants.Get.BULLET_POSITION);
+        _bullet = Resources.Load<GameObject>(Constants.Get.BULLET);
     }
 
     void OnEnable()
@@ -23,8 +23,9 @@ public class WeaponShoot : MonoBehaviour
 
     void DoShoot()
     {
-        if(bulletPoint){
-            var newBullet = GameObject.Instantiate(bullet, bulletPoint.position, bulletPoint.rotation);
+        if(_bulletPoint)
+        {
+            var newBullet = GameObject.Instantiate(_bullet, _bulletPoint.position, _bulletPoint.rotation);
         }
     }
 }
