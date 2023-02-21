@@ -13,12 +13,12 @@ public class WeaponShoot : MonoBehaviour
 
     void OnEnable()
     {
-        PlayerInputs.Shoot += DoShoot;
+        PlayerInputs.OnShoot += DoShoot;
     }
 
     void OnDisable()
     {
-        PlayerInputs.Shoot -= DoShoot;
+        PlayerInputs.OnShoot -= DoShoot;
     }
 
     void DoShoot()

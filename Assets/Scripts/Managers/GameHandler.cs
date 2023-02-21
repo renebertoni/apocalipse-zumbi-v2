@@ -14,13 +14,13 @@ public class GameHandler : MonoBehaviour
     void OnEnable()
     {
         PlayerHealth.OnDead += DoGameOver;
-        PlayerInputs.DontShot += RestartScene;
+        PlayerInputs.DontShoot += RestartScene;
     }
 
     void OnDisable()
     {
         PlayerHealth.OnDead -= DoGameOver;
-        PlayerInputs.DontShot -= RestartScene;
+        PlayerInputs.DontShoot -= RestartScene;
     }
 
     void RestartScene()

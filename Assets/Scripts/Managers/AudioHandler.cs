@@ -7,16 +7,16 @@ public class AudioHandler : MonoBehaviour
 
     void OnEnable()
     {
-        EnemySpawn.SetAudioSource += DoSetAudioSource;
+        EnemyHealth.InsertAudio += OnInsertAudio;
         GameHandler.GameOver += DoGameOver;
     }
     void OnDisable()
     {
-        EnemySpawn.SetAudioSource -= DoSetAudioSource;
+        EnemyHealth.InsertAudio -= OnInsertAudio;
         GameHandler.GameOver -= DoGameOver;
     }
 
-    void DoSetAudioSource(AudioSource audioSource)
+    void OnInsertAudio(AudioSource audioSource)
     {
         if(!audioSources.Contains(audioSource))
         {

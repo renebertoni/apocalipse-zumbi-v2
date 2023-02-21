@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
 
 public class PlayerHealth : CharacterHealthBase
@@ -10,16 +7,16 @@ public class PlayerHealth : CharacterHealthBase
     public bool IsAlive = true;
 
     private void OnEnable(){
-        EnemyAttackTrigger.Hit += ReceiveDamage;
+        EnemyAttack.Hit += ReceiveDamage;
     }
     
     private void OnDisable (){
-        EnemyAttackTrigger.Hit -= ReceiveDamage;
+        EnemyAttack.Hit -= ReceiveDamage;
     }
 
     public override void ReceiveDamage(int damage){
         base.ReceiveDamage(damage);
-        OnDamage?.Invoke(this._health);
+        OnDamage?.Invoke(Health);
     }
 
     public override void Die(){

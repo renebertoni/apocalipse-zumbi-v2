@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(EnemySettings))]
+[RequireComponent(typeof(NavMesh))]
 public class EnemyMovement : CharacterMovementBase
 {
     [SerializeField]
@@ -10,16 +10,12 @@ public class EnemyMovement : CharacterMovementBase
 
     protected override void Awake(){
         base.Awake();
-        this._navMesh = GetComponent<NavMeshAgent>();
-
-        if(this._navMesh){
-            this._navMesh.speed = this._speed;
-            this._navMesh.stoppingDistance = this._stopDistance;
-        }
+        _navMesh = GetComponent<NavMeshAgent>();
+        _navMesh.speed = Speed;
     }
 
     void FixedUpdate (){
-        var playerPosition = PlayerStatus.Position;
+        var playerPosition = PlayerMovement.Position;
         var position = new Vector2(playerPosition.x, playerPosition.z);
         DoMove(position);
         LookAtTarget(position);
@@ -27,8 +23,8 @@ public class EnemyMovement : CharacterMovementBase
 
     public override void DoMove(Vector2 targetPosition){
         var position = new Vector3(targetPosition.x, 0, targetPosition.y);
-        this._navMesh.destination = position;
-        this._animator.SetFloat(Constants.Get.MOVE_SPEED, _navMesh.velocity.magnitude);
+        _navMesh.destination = position;
+        Animator.SetFloat(Constants.Get.MOVE_SPEED, _navMesh.velocity.magnitude);
     }
 
     public override void LookAtTarget(Vector2 targetPosition){

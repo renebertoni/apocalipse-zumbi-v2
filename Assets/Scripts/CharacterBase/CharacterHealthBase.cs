@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterHealthBase : MonoBehaviour, IDamage
 {
     [SerializeField]
-    protected int _health;
+    protected int Health;
 
     public virtual void ReceiveDamage(int damage){
-        _health -= damage;
+        Health -= damage;
         CheckHealth();
     }
 
@@ -19,11 +17,12 @@ public class CharacterHealthBase : MonoBehaviour, IDamage
     }
 
     public virtual void Die(){
-        print("metodo do character");
+        // TODO IMPLEMENTAR UM PADRAO PARA MORTE
+        print("Nenhuma açao de morte implementada");
     }
     
     protected bool IsDead(){
-        return _health <= 0;
+        return Health <= 0;
     }
 }
 
