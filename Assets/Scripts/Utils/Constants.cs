@@ -11,5 +11,7 @@ namespace Constants
         public const string MENU_BACKGROUND = "MenuBackground";
         public const string BULLET_POSITION = "BulletPosition";
         public const string GAME_OVER_BACKGROUND = "GameOverBackground";
+        public const string ZOMBIE_ATTACK = "ZombieAttack";
+        public const string WEAPON_SHOOT = "WeaponShoot";
     }
 }

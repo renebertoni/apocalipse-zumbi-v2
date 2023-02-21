@@ -1,16 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField]
     float _speed;
+    [SerializeField]
+    float lifeTime;
     AudioSource _audioSource;
+
+    public static Action<string> PlayAudio;
 
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
-        _audioSource.Play();
+        PlayAudio?.Invoke(Constants.Get.WEAPON_SHOOT);
         StartCoroutine(DestroyBullet());
     }
 
@@ -28,7 +32,7 @@ public class BulletMovement : MonoBehaviour
 
     IEnumerator DestroyBullet()
     {
-        yield return new WaitUntil(() => !_audioSource.isPlaying );
+        yield return new WaitForSeconds(lifeTime);
         Destroy(this.gameObject);
     }
 }

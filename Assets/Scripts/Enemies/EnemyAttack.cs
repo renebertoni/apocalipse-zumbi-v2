@@ -14,6 +14,7 @@ public class EnemyAttack : MonoBehaviour
     bool _canHit;
 
     public static Action<int> Hit;
+    public static Action<string> PlayAudio;
 
     void Awake()
     {
@@ -29,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
 
     public void Attack()
     {
-        _audioAttack.Play();
+        PlayAudio?.Invoke(Constants.Get.ZOMBIE_ATTACK);
 
         StartCoroutine(IsAttacking(true, 0f));
         StartCoroutine(IsAttacking(false, 1f));
