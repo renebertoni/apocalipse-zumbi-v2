@@ -176,14 +176,12 @@ GameObject:
   - component: {fileID: 5866666021461940171}
   - component: {fileID: 5866666021461940170}
   - component: {fileID: 5866666021461940165}
-  - component: {fileID: 5866666021461940169}
   - component: {fileID: 5866666021461940168}
   - component: {fileID: 5866666021461940167}
   - component: {fileID: 5866666021461940166}
-  - component: {fileID: 5866666021461940173}
   m_Layer: 0
-  m_Name: Zombie
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,21 +380,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5866666021461940169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605105306980817517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1cc7d6e018d4d4ea8ed42d187b7d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.3
-  stopDistance: 3
-  bloodParticle: {fileID: 5286093103015778059, guid: cdb8df387810f9049b61c219ed143913, type: 3}
 --- !u!114 &5866666021461940168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3ce9b34ecd09841a511cb1d10dc5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 1
+  _stopDistance: 2
 --- !u!114 &5866666021461940167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a9c6cea09c19041a23bf924547d6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 2
+  _bloodParticle: {fileID: 5286093103015778059, guid: cdb8df387810f9049b61c219ed143913, type: 3}
 --- !u!114 &5866666021461940166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,19 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f7201a3854e2f44a398bcd578d7006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioAttack: {fileID: 83941156, guid: 35861510587b7489780fe86970823679, type: 3}
---- !u!114 &5866666021461940173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605105306980817517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49928d492c17ad248955c2c4c99edf88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _audioAttack: {fileID: 0}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &660219388702000761
 GameObject:
   m_ObjectHideFlags: 0

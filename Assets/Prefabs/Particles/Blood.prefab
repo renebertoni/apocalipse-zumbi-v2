@@ -4895,7 +4895,7 @@ GameObject:
   - component: {fileID: 5286093103015778058}
   - component: {fileID: 1054820701}
   m_Layer: 0
-  m_Name: Blood Splash
+  m_Name: Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

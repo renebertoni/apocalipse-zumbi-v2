@@ -45,14 +45,17 @@ public class AudioHandler : MonoBehaviour
 
     void OnInsertAudio(AudioSource audioSource)
     {
-        if(!_audioSources.Contains(audioSource))
+        if(audioSource != null)
         {
-            _audioSources.Add(audioSource);
-        }
-        else
-        {
-            _audioSources.Remove(audioSource);
-            ClearVoidsFromList();
+            if(!_audioSources.Contains(audioSource))
+            {
+                _audioSources.Add(audioSource);
+            }
+            else
+            {
+                _audioSources.Remove(audioSource);
+                ClearVoidsFromList();
+            }
         }
     }
 

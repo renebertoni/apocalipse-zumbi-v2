@@ -1,14 +1,15 @@
 using UnityEngine;
+using System;
 
 public class WeaponShoot : MonoBehaviour
 {
     Transform _bulletPoint;
-    GameObject _bullet;
+    
+    public static Action<string, Transform> SpawnObject;
     
     void Start()
     {
         _bulletPoint = transform.Find(Constants.Get.BULLET_POSITION);
-        _bullet = Resources.Load<GameObject>(Constants.Get.BULLET);
     }
 
     void OnEnable()
@@ -25,7 +26,7 @@ public class WeaponShoot : MonoBehaviour
     {
         if(_bulletPoint)
         {
-            var newBullet = GameObject.Instantiate(_bullet, _bulletPoint.position, _bulletPoint.rotation);
+            SpawnObject?.Invoke(Constants.Get.BULLET, _bulletPoint);
         }
     }
 }

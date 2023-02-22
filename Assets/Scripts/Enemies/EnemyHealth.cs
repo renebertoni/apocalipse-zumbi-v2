@@ -3,19 +3,16 @@ using System;
 
 public class EnemyHealth : CharacterHealthBase
 {
-    [SerializeField]
-    ParticleSystem _bloodParticle;
     AudioSource _audioSource;
 
-    public static Action<AudioSource> InsertAudio;
-    public static Action EnemySpawned;
     public static Action EnemyDead;
+    public static Action<AudioSource> InsertAudio;
+    public static Action<string, Transform> SpawnObject;
 
     void Start()
     {
         ChosenEnemy();
         _audioSource = GetComponent<AudioSource>();
-        EnemySpawned?.Invoke();
         InsertAudio?.Invoke(_audioSource);
     }
 
@@ -38,7 +35,7 @@ public class EnemyHealth : CharacterHealthBase
     {
         if(other.gameObject.CompareTag(Constants.Get.BULLET))
         {
-            Instantiate(_bloodParticle, transform.position, Quaternion.identity);
+            SpawnObject?.Invoke(Constants.Get.BLOOD, transform);
             ReceiveDamage(1);
         }
     }
