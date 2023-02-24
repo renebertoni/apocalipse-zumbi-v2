@@ -14,7 +14,7 @@ public class BulletMovement : MonoBehaviour
 
     void Start()
     {
-        PlayAudio?.Invoke(Constants.Get.WEAPON_SHOOT);
+        PlayAudio?.Invoke(Constants.WEAPON_SHOOT);
         StartCoroutine(DestroyBullet());
     }
 

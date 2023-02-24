@@ -8,9 +8,12 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     AudioSource _audioAttack;
     [SerializeField]
-    LayerMask _layerMask;
+    LayerMask _targetLayerMask;
     NavMeshAgent _navMeshAgent;
     Animator _animator;
+
+    [SerializeField]
+    float _attackDistance;
     bool _canHit;
 
     public static Action<int> Hit;
@@ -24,22 +27,22 @@ public class EnemyAttack : MonoBehaviour
 
     void FixedUpdate()
     {
-        NearTheTarget();
-        _animator.SetBool(Constants.Get.ATTACK, _canHit);
+        _canHit = NearTheTarget();
+        _animator.SetBool(Constants.ATTACK, _canHit);
     }
 
     public void Attack()
     {
-        PlayAudio?.Invoke(Constants.Get.ZOMBIE_ATTACK);
+        PlayAudio?.Invoke(Constants.ZOMBIE_ATTACK);
 
         StartCoroutine(IsAttacking(true, 0f));
         StartCoroutine(IsAttacking(false, 1f));
     }
 
-    void NearTheTarget()
+    bool NearTheTarget()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward, 1f, _layerMask);
-        _canHit = hitColliders.Length > 0;
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward, _attackDistance, _targetLayerMask);
+        return hitColliders.Length > 0;
     }
 
     void OnDrawGizmos()

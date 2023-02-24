@@ -7,7 +7,7 @@ public class EnemyHealth : CharacterHealthBase
 
     public static Action EnemyDead;
     public static Action<AudioSource> InsertAudio;
-    public static Action<string, Transform> SpawnObject;
+    public static Action<string, Vector3, Quaternion> SpawnObject;
 
     void Start()
     {
@@ -33,9 +33,9 @@ public class EnemyHealth : CharacterHealthBase
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag(Constants.Get.BULLET))
+        if(other.gameObject.CompareTag(Constants.BULLET))
         {
-            SpawnObject?.Invoke(Constants.Get.BLOOD, transform);
+            SpawnObject?.Invoke(Constants.BLOOD, transform.position, transform.rotation);
             ReceiveDamage(1);
         }
     }

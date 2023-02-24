@@ -5,11 +5,11 @@ public class WeaponShoot : MonoBehaviour
 {
     Transform _bulletPoint;
     
-    public static Action<string, Transform> SpawnObject;
+    public static Action<string, Vector3, Quaternion> SpawnObject;
     
     void Start()
     {
-        _bulletPoint = transform.Find(Constants.Get.BULLET_POSITION);
+        _bulletPoint = transform.Find(Constants.BULLET_POSITION);
     }
 
     void OnEnable()
@@ -26,7 +26,7 @@ public class WeaponShoot : MonoBehaviour
     {
         if(_bulletPoint)
         {
-            SpawnObject?.Invoke(Constants.Get.BULLET, _bulletPoint);
+            SpawnObject?.Invoke(Constants.BULLET, _bulletPoint.position, _bulletPoint.rotation);
         }
     }
 }

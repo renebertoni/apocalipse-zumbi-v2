@@ -237,14 +237,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &14499148
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -256,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -264,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901168
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -276,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -350,12 +354,16 @@ PrefabInstance:
       value: Carro_Capotado_02
       objectReference: {fileID: 0}
     - target: {fileID: 1093992461087726, guid: e7f6f65d681c040ae87ec9b4447c6ca7, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093992461087726, guid: e7f6f65d681c040ae87ec9b4447c6ca7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4366182680309670, guid: e7f6f65d681c040ae87ec9b4447c6ca7, type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 4366182680309670, guid: e7f6f65d681c040ae87ec9b4447c6ca7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -547,8 +555,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1238739826776168, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238739826776168, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419878085915960, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1419878085915960, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -557,6 +573,10 @@ PrefabInstance:
     - target: {fileID: 1545628521161258, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
       propertyPath: m_Name
       value: Loja_Destruido_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545628521161258, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1545628521161258, guid: b0d533d5cf9d144e2ae7f6e595614ec5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -764,9 +784,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -859,8 +883,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &38753701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1006,7 +1034,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -1018,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1038,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1046,7 +1074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1075,8 +1103,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1080922358991876, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080922358991876, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169988846741954, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1169988846741954, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1085,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 1989350665703294, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
       propertyPath: m_Name
       value: Loja_Destruido_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989350665703294, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1989350665703294, guid: d144633a57b704679aeeab6c6808aa84, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1343,9 +1383,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1406,8 +1450,16 @@ PrefabInstance:
       value: Predio_Apartamentos_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1475,9 +1527,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1604,12 +1660,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1070195278617758, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070195278617758, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1153675928763420, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153675928763420, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618027056081594, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1618027056081594, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1620,12 +1688,24 @@ PrefabInstance:
       value: Carro_Bombeiro
       objectReference: {fileID: 0}
     - target: {fileID: 1771778994254252, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771778994254252, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1863820561398086, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863820561398086, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894986445245562, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1894986445245562, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1633,7 +1713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4904877903186600, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 4904877903186600, guid: 9057a921d6d1a49839ea2068c4edae0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1763,9 +1843,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1896,8 +1980,16 @@ PrefabInstance:
       value: Predio_Apartamentos_Destruido (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2001,7 +2093,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -2013,7 +2105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2021,7 +2113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901161
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2033,7 +2125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2074,12 +2166,16 @@ PrefabInstance:
       value: Carro_Capotado_03
       objectReference: {fileID: 0}
     - target: {fileID: 1991792017311036, guid: a9398d190b8e94f2f9e38d8b1fe42278, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991792017311036, guid: a9398d190b8e94f2f9e38d8b1fe42278, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4065573984312822, guid: a9398d190b8e94f2f9e38d8b1fe42278, type: 3}
       propertyPath: m_RootOrder
-      value: 82
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 4065573984312822, guid: a9398d190b8e94f2f9e38d8b1fe42278, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2204,9 +2300,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2260,7 +2360,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -2272,7 +2372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2280,7 +2380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2292,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2326,7 +2426,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -2334,7 +2434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2354,7 +2454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2534,9 +2634,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2629,8 +2733,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &376167850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376167850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.93, y: 0, z: -30.5}
+  m_LocalPosition: {x: -12.54, y: 0, z: -10.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2675,8 +2783,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 3, y: 7}
+  _timeToSpawn: {x: 2, y: 6}
+  _spawnRadius: 5
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 896
 --- !u!1 &377111490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,8 +2817,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.5943259, g: 0.5801887, b: 1, a: 1}
+  m_Intensity: 0.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2783,12 +2895,16 @@ PrefabInstance:
       value: Ambulancia_Quebrada
       objectReference: {fileID: 0}
     - target: {fileID: 1225016637867422, guid: 967c32f5e6c1149c785f5d082d0ab7cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225016637867422, guid: 967c32f5e6c1149c785f5d082d0ab7cc, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4297495853573948, guid: 967c32f5e6c1149c785f5d082d0ab7cc, type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4297495853573948, guid: 967c32f5e6c1149c785f5d082d0ab7cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3140,7 +3256,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -3148,7 +3264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3168,7 +3284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3176,7 +3292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3283,9 +3399,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 59
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3480,7 +3600,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -3488,7 +3608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3508,7 +3628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3548,9 +3668,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3643,8 +3767,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &491607194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,14 +3895,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &514738758
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -3782,7 +3914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3802,7 +3934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3810,7 +3942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3912,9 +4044,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_Destruido_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1403666533799626, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3976,7 +4112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b1774bd68b7e19545aa0aa03f5d6a8ec, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b1774bd68b7e19545aa0aa03f5d6a8ec, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4045,6 +4181,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1108520010257426, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108520010257426, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4053,8 +4193,16 @@ PrefabInstance:
       value: Hospital_Entrada_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 1545347697385542, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545347697385542, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594092036384200, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1594092036384200, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4062,7 +4210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944349475237470, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4944349475237470, guid: 1add1b0daa1624e3ea6e43bdcef050e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4192,13 +4340,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caminhonete_Quebrada_01 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_RootOrder
-      value: 88
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4398,9 +4542,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4460,9 +4608,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4516,7 +4668,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -4524,7 +4676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4532,7 +4684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.330669e-15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4544,7 +4696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4585,8 +4737,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_05
       objectReference: {fileID: 0}
     - target: {fileID: 1178430294733908, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178430294733908, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437226328740242, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1437226328740242, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4594,7 +4754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4146881079525304, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4146881079525304, guid: 05eb9e62b0ab4448dbc48133ae89fdff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4724,9 +4884,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4937,9 +5101,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5069,9 +5237,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5131,9 +5303,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5194,12 +5370,16 @@ PrefabInstance:
       value: Van_Batida_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1749929352849394, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749929352849394, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4998480935363928, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_RootOrder
-      value: 78
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4998480935363928, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5434,9 +5614,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5496,9 +5680,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 63
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6028,9 +6216,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6091,8 +6283,20 @@ PrefabInstance:
       value: Hotel_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
       propertyPath: m_RootOrder
@@ -6244,12 +6448,16 @@ PrefabInstance:
       value: Carro_Capotado_01
       objectReference: {fileID: 0}
     - target: {fileID: 1498908137830774, guid: c43228607ad9e40e4b51b49570ad1466, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498908137830774, guid: c43228607ad9e40e4b51b49570ad1466, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4326117727925968, guid: c43228607ad9e40e4b51b49570ad1466, type: 3}
       propertyPath: m_RootOrder
-      value: 83
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 4326117727925968, guid: c43228607ad9e40e4b51b49570ad1466, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6368,7 +6576,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -6376,7 +6584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6384,7 +6592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901168
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6396,7 +6604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -6436,9 +6644,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6565,12 +6777,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1111357624013402, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111357624013402, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1190945251530098, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190945251530098, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234396092486822, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1234396092486822, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6581,28 +6805,56 @@ PrefabInstance:
       value: CaminhaoDeLixo
       objectReference: {fileID: 0}
     - target: {fileID: 1338419667248990, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338419667248990, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360743365451166, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1360743365451166, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1463984985741830, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463984985741830, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476099596997298, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1476099596997298, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1653177870327790, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653177870327790, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1674306562669094, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674306562669094, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737359978598332, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1737359978598332, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6610,7 +6862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312643308118630, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_RootOrder
-      value: 79
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4312643308118630, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6735,9 +6987,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6798,12 +7054,16 @@ PrefabInstance:
       value: Helicoptero_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 1788063535671322, guid: d3b3574e65a104da6b8e3e8cc2517e34, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788063535671322, guid: d3b3574e65a104da6b8e3e8cc2517e34, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4577945250690642, guid: d3b3574e65a104da6b8e3e8cc2517e34, type: 3}
       propertyPath: m_RootOrder
-      value: 81
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 4577945250690642, guid: d3b3574e65a104da6b8e3e8cc2517e34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7032,7 +7292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0590a6b8110c7448ac917787de87484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxEnemies: 2
+  _maxEnemies: 100
 --- !u!114 &924926551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7060,9 +7320,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_Destruido_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1403666533799626, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_RootOrder
-      value: 67
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7123,12 +7387,16 @@ PrefabInstance:
       value: Caminhonete_Quebrada_01
       objectReference: {fileID: 0}
     - target: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_RootOrder
-      value: 80
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7253,9 +7521,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7675,25 +7947,11 @@ Transform:
   - {fileID: 151393605}
   - {fileID: 247384590}
   - {fileID: 1402203542}
-  - {fileID: 340380176}
-  - {fileID: 469470149}
-  - {fileID: 1766522694}
-  - {fileID: 605839404}
   - {fileID: 565358819}
-  - {fileID: 49353076}
-  - {fileID: 1401403676}
-  - {fileID: 514738759}
-  - {fileID: 408610544}
   - {fileID: 628332605}
   - {fileID: 1617374891}
   - {fileID: 1825035810}
   - {fileID: 1943846494}
-  - {fileID: 2032810130}
-  - {fileID: 284446879}
-  - {fileID: 1297941176}
-  - {fileID: 336277252}
-  - {fileID: 14499149}
-  - {fileID: 869123886}
   - {fileID: 1340930891}
   - {fileID: 708302301}
   - {fileID: 1399546831}
@@ -7845,9 +8103,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7912,9 +8174,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8119,9 +8385,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8181,9 +8451,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8243,9 +8517,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8330,7 +8608,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -8338,7 +8616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8346,7 +8624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8358,7 +8636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -8395,12 +8673,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1111357624013402, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111357624013402, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1190945251530098, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190945251530098, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234396092486822, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1234396092486822, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8411,28 +8701,56 @@ PrefabInstance:
       value: CaminhaoDeLixo (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1338419667248990, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338419667248990, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360743365451166, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1360743365451166, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1463984985741830, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463984985741830, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476099596997298, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1476099596997298, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1653177870327790, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653177870327790, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1674306562669094, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674306562669094, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737359978598332, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1737359978598332, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8440,7 +8758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312643308118630, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 4312643308118630, guid: 7647ea840cb314376b0ea8d89d483e95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8635,9 +8953,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9048,8 +9370,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1399546830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9061,9 +9387,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9117,7 +9447,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -9129,7 +9459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9149,7 +9479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -9157,7 +9487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9190,8 +9520,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_03 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9259,9 +9597,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9598,12 +9940,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_Name
       value: Predio_Comercial_Destruido_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9741,9 +10091,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 64
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9944,8 +10298,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_03
       objectReference: {fileID: 0}
     - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10013,9 +10375,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_Destruido_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1403666533799626, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_RootOrder
-      value: 87
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10080,9 +10446,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10143,8 +10513,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_03 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623366900972684, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1984166997344338, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10152,7 +10530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889253742365826, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4889253742365826, guid: d48c4751b011a482eb2476af6830afe3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10212,9 +10590,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10307,8 +10689,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1641540511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10320,9 +10706,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 62
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10562,9 +10952,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10624,9 +11018,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_Destruido_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1403666533799626, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_RootOrder
-      value: 66
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10686,9 +11084,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10745,6 +11147,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10753,12 +11159,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_08
       objectReference: {fileID: 0}
     - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4965285260132488, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 4965285260132488, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10818,9 +11228,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_Destruido_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1403666533799626, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_RootOrder
-      value: 86
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 4600660653577794, guid: fb0717d22731641ffa17f7938709c24a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10875,9 +11289,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 65
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10937,9 +11355,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10988,6 +11410,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
   m_PrefabInstance: {fileID: 1708587870}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711915861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711915862}
+  - component: {fileID: 1711915863}
+  m_Layer: 0
+  m_Name: Flashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711915862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711915861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11, y: 0.809, z: -0.21}
+  m_LocalScale: {x: 0.5, y: 0.5000001, z: 0.5000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8248668297085206776}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1711915863
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711915861}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 10.9
+  m_Range: 10.43
+  m_SpotAngle: 65.8
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1731748685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
@@ -11011,7 +11527,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -11019,7 +11535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11027,7 +11543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.330669e-15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11039,7 +11555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -11146,6 +11662,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1140933352}
     m_Modifications:
     - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329571503944892, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11154,12 +11674,16 @@ PrefabInstance:
       value: Predio_Comercial_Destruido_08 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484510235756726, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4965285260132488, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4965285260132488, guid: 9ecc591fb23494d309a91f2f66073c79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11322,8 +11846,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea5cee396042194db45f8ee9654cd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToSpawn: {x: 0, y: 0}
+  _timeToSpawn: {x: 3, y: 8}
+  _spawnRadius: 0
   _spawnType: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1849101124
 GameObject:
   m_ObjectHideFlags: 0
@@ -11434,12 +11962,16 @@ PrefabInstance:
       value: Caminhonete_Quebrada_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_RootOrder
-      value: 77
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 4624213651258038, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11565,12 +12097,24 @@ PrefabInstance:
       value: Hotel_Secundario_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 833a86cb485eddc408c979d6e2f581c3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11664,12 +12208,16 @@ PrefabInstance:
       value: Van_Batida_01
       objectReference: {fileID: 0}
     - target: {fileID: 1749929352849394, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749929352849394, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4998480935363928, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_RootOrder
-      value: 84
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4998480935363928, guid: 37857ccc62dcd40a088e0d9273841e91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11724,9 +12272,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11857,12 +12409,16 @@ PrefabInstance:
       value: TanqueDeGuerra_Destruido
       objectReference: {fileID: 0}
     - target: {fileID: 1218412560417200, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218412560417200, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4432038258141054, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_RootOrder
-      value: 85
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 4432038258141054, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11991,6 +12547,20 @@ Transform:
   - {fileID: 1526185807}
   - {fileID: 786833239}
   - {fileID: 1888680275}
+  - {fileID: 340380176}
+  - {fileID: 469470149}
+  - {fileID: 1766522694}
+  - {fileID: 605839404}
+  - {fileID: 49353076}
+  - {fileID: 1401403676}
+  - {fileID: 514738759}
+  - {fileID: 408610544}
+  - {fileID: 2032810130}
+  - {fileID: 284446879}
+  - {fileID: 1297941176}
+  - {fileID: 336277252}
+  - {fileID: 14499149}
+  - {fileID: 869123886}
   m_Father: {fileID: 1932841705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12040,8 +12610,16 @@ PrefabInstance:
       value: Predio_Apartamentos_Destruido (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750897353327754, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1992127796715304, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12049,7 +12627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4479516979850122, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4479516979850122, guid: f8c2bd3ebd46d464997af19fb51b028d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12109,9 +12687,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParedeTijolos_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1427284876691460, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4791428832001672, guid: 0b76d7f1a737248a59eb5b1fef8f7ba4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12269,7 +12851,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1140933352}
+    m_TransformParent: {fileID: 1919070743}
     m_Modifications:
     - target: {fileID: 1163550317593264, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_Name
@@ -12281,7 +12863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12289,7 +12871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000014901161
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12301,7 +12883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4947205026216590, guid: c9f0de4d804d840c383edaaac31b4816, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12775,6 +13357,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4326117727925968, guid: c43228607ad9e40e4b51b49570ad1466, type: 3}
   m_PrefabInstance: {fileID: 846724202}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2096539149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1590974005278462, guid: e02fae233aab240dfb69c6c170b19bfd, type: 3}
+  m_PrefabInstance: {fileID: 581893720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2096539152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096539149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7388906, y: 2.9841914, z: 6.5069413}
+  m_Center: {x: 0, y: 1.3110731, z: 0}
 --- !u!1001 &2099851287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12997,12 +13597,16 @@ PrefabInstance:
       value: TanqueDeGuerra_Destruido (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1218412560417200, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218412560417200, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4432038258141054, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4432038258141054, guid: ee7f91516af52453f98f491cf554a1f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13104,6 +13708,14 @@ PrefabInstance:
     - target: {fileID: 5620186059486857278, guid: 2761d7cb4018f2f4694c2c91e1a394ac, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733316064361454153, guid: 2761d7cb4018f2f4694c2c91e1a394ac, type: 3}
+      propertyPath: _easeRotation
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733316064361454154, guid: 2761d7cb4018f2f4694c2c91e1a394ac, type: 3}
+      propertyPath: Health
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2761d7cb4018f2f4694c2c91e1a394ac, type: 3}

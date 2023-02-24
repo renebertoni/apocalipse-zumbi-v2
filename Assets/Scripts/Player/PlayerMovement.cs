@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerMovement : CharacterMovementBase
 {
     [SerializeField]
+    float _easeRotation;
+    [SerializeField]
     LayerMask _layermask;
     [HideInInspector]
     public static Vector3 Position{
@@ -13,13 +15,13 @@ public class PlayerMovement : CharacterMovementBase
     void OnEnable()
     {
         PlayerInputs.Move += DoMove;
-        PlayerInputs.Rotate += LookAtTarget;
+        PlayerInputs.Rotate += MousePositionToTarget;
     }
 
     void OnDisable()
     {
         PlayerInputs.Move -= DoMove;
-        PlayerInputs.Rotate -= LookAtTarget;
+        PlayerInputs.Rotate -= MousePositionToTarget;
     }
 
     void FixedUpdate()
@@ -33,10 +35,10 @@ public class PlayerMovement : CharacterMovementBase
         CharacterController.Move( new Vector3(inputMove.x, 0, inputMove.y) );
 
         var speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
-        Animator.SetFloat(Constants.Get.MOVE_SPEED, Mathf.Clamp(speed, 0, 1));
+        Animator.SetFloat(Constants.MOVE_SPEED, Mathf.Clamp(speed, 0, 1));
     }
 
-    public override void LookAtTarget(Vector2 mousePosition)
+    void MousePositionToTarget(Vector2 mousePosition)
     {
         Ray ray = Camera.main.ScreenPointToRay(mousePosition);
         RaycastHit hit;
@@ -45,7 +47,7 @@ public class PlayerMovement : CharacterMovementBase
         {
             Vector3 lookPosition = hit.point;
             lookPosition.y = transform.position.y;
-            transform.LookAt(lookPosition);
+            LookAtTarget(lookPosition, _easeRotation);
         }
     }
 }

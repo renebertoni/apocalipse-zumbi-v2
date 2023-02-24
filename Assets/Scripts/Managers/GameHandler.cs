@@ -25,7 +25,7 @@ public class GameHandler : MonoBehaviour
 
     void RestartScene()
     {
-        SceneManager.LoadScene(Constants.Get.LEVEL_01);
+        SceneManager.LoadScene(Constants.LEVEL_01);
     }
 
     void DoGameOver()

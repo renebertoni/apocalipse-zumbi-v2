@@ -6,7 +6,7 @@ public class UIHandler : MonoBehaviour
 
     void Awake()
     {
-        _gameOver = GameObject.Find(Constants.Get.GAME_OVER_BACKGROUND);
+        _gameOver = GameObject.Find(Constants.GAME_OVER_BACKGROUND);
         _gameOver.SetActive(false);
     }
 

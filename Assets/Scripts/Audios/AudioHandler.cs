@@ -8,11 +8,12 @@ public class AudioHandler : MonoBehaviour
     AudioSource _sfxAudioSource;
     AudioStorage _audioStorage;
 
-    void Awake() {
+    void Awake()
+    {
         _audioStorage = GetComponent<AudioStorage>();
     }
 
-    private void Start()
+    void Start()
     {
         _sfxAudioSource = GameObject.Find("SFX")?.GetComponent<AudioSource>();
     }
@@ -33,7 +34,7 @@ public class AudioHandler : MonoBehaviour
         BulletMovement.PlayAudio += PlayAudio;
     }
 
-    private void PlayAudio(string audioName)
+    void PlayAudio(string audioName)
     {
         var audio = _audioStorage.GetAudio(audioName);
 

@@ -39,19 +39,19 @@ public class SpawnHandler : MonoBehaviour
         return _enemyCount < _maxEnemies;
     }
 
-    void OnSpawnObject(string objectName, Transform transform){
+    void OnSpawnObject(string objectName, Vector3 position , Quaternion rotation){
         var objectToSpawn = _spawnStorage.GetObject(objectName);
 
         if(objectToSpawn != null)
         {
-            if(objectToSpawn.CompareTag(Constants.Get.ENEMY) && CanSpawnEnemy())
+            if(objectToSpawn.CompareTag(Constants.ENEMY) && CanSpawnEnemy())
             {
                 _enemyCount++;
-                Instantiate(objectToSpawn, transform.position, transform.rotation);
+                Instantiate(objectToSpawn, position, rotation);
             }
-            else if(!objectToSpawn.CompareTag(Constants.Get.ENEMY))
+            else if(!objectToSpawn.CompareTag(Constants.ENEMY))
             {
-                Instantiate(objectToSpawn, transform.position, transform.rotation);
+                Instantiate(objectToSpawn, position, rotation);
             }
         }
     }

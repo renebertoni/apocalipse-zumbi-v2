@@ -5,34 +5,69 @@ using UnityEngine.AI;
 public class EnemyMovement : CharacterMovementBase
 {
     [SerializeField]
-    float _stopDistance;
+    LayerMask _targetLayerMask;
     NavMeshAgent _navMesh;
+
+    [SerializeField]
+    float _detectionDistance;
+    [SerializeField]
+    float _stopDistance;
+    [SerializeField]
+    float _easeRotation;
+    float _walkAroundDistance = 10f;
+    float _timeToFindPosition = 5f;
+    bool _followingPlayer = false;
+    Vector3 _targetPosition;
 
     protected override void Awake()
     {
         base.Awake();
         _navMesh = GetComponent<NavMeshAgent>();
         _navMesh.speed = Speed;
+        _navMesh.stoppingDistance = _stopDistance;
+        _targetPosition = PlayerMovement.Position;
     }
 
     void FixedUpdate ()
     {
-        var playerPosition = PlayerMovement.Position;
-        var position = new Vector2(playerPosition.x, playerPosition.z);
-        DoMove(position);
-        LookAtTarget(position);
+        ChooseTarget();
+        DoMove(_targetPosition);
+        LookAtTarget(_targetPosition, _easeRotation);
     }
 
     public override void DoMove(Vector2 targetPosition)
     {
-        var position = new Vector3(targetPosition.x, 0, targetPosition.y);
-        _navMesh.destination = position;
-        Animator.SetFloat(Constants.Get.MOVE_SPEED, _navMesh.velocity.magnitude);
+        Animator.SetFloat(Constants.MOVE_SPEED, _navMesh.velocity.magnitude);
     }
 
-    public override void LookAtTarget(Vector2 targetPosition)
+    // TODO MELHORARRRR
+    void ChooseTarget()
     {
-        var position = new Vector3(targetPosition.x, 0, targetPosition.y);
-        transform.LookAt(position);
+        if(Helper.NearTheTarget(transform, _detectionDistance, _targetLayerMask))
+        {
+            _followingPlayer = true;
+            _targetPosition = PlayerMovement.Position;
+            _navMesh.destination = _targetPosition;
+        }
+        else
+        {
+            if(_followingPlayer) _navMesh.destination = transform.position;
+            _followingPlayer = false;
+
+            _timeToFindPosition -= Time.deltaTime;
+
+            if(_timeToFindPosition <= 0f)
+            {
+                _targetPosition = Helper.RandomPosition(transform, _walkAroundDistance);
+                _navMesh.destination = _targetPosition;
+                _timeToFindPosition = 5f;
+            }
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.3f);
+        Gizmos.DrawSphere(transform.position, _detectionDistance);
     }
 }

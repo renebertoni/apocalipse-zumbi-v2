@@ -5,6 +5,6 @@ public class UI_Menu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(Constants.Get.LEVEL_01);
+        SceneManager.LoadScene(Constants.LEVEL_01);
     }
 }
