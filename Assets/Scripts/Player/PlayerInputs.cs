@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerInputs : MonoBehaviour
 {
     public static Action OnShoot;
-    public static Action DontShoot;
     public static Action<Vector2> Move;
     public static Action<Vector2> Rotate;
 
@@ -45,6 +44,5 @@ public class PlayerInputs : MonoBehaviour
     void LeftMouseClick(InputAction.CallbackContext obj)
     {
         if(_playerHealth.IsAlive) OnShoot?.Invoke();
-        else DontShoot?.Invoke();// TODO REMOVER ISSO E REINICIAR POR BOTAO
     }
 }

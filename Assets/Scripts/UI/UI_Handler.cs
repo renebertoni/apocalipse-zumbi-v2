@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 
-public class UIHandler : MonoBehaviour
+public class UI_Handler : MonoBehaviour
 {
     GameObject _gameOver;
+    public static Action Restart;
 
     void Awake()
     {
@@ -22,5 +24,10 @@ public class UIHandler : MonoBehaviour
     void DoGameOver()
     {
         _gameOver.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        Restart?.Invoke();
     }
 }

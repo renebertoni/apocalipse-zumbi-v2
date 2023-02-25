@@ -15,7 +15,7 @@ public class EnemyMovement : CharacterMovementBase
     [SerializeField]
     float _easeRotation;
     float _walkAroundDistance = 10f;
-    float _timeToFindPosition = 5f;
+    float _timeToFindPosition = 10f;
     bool _followingPlayer = false;
     Vector3 _targetPosition;
 
@@ -60,7 +60,7 @@ public class EnemyMovement : CharacterMovementBase
             {
                 _targetPosition = Helper.RandomPosition(transform, _walkAroundDistance);
                 _navMesh.destination = _targetPosition;
-                _timeToFindPosition = 5f;
+                _timeToFindPosition = 10f;
             }
         }
     }

@@ -14,13 +14,13 @@ public class GameHandler : MonoBehaviour
     void OnEnable()
     {
         PlayerHealth.OnDead += DoGameOver;
-        PlayerInputs.DontShoot += RestartScene;
+        UI_Handler.Restart += RestartScene;
     }
 
     void OnDisable()
     {
         PlayerHealth.OnDead -= DoGameOver;
-        PlayerInputs.DontShoot -= RestartScene;
+        UI_Handler.Restart -= RestartScene;
     }
 
     void RestartScene()
@@ -30,7 +30,7 @@ public class GameHandler : MonoBehaviour
 
     void DoGameOver()
     {
-        GameOver?.Invoke();
         Time.timeScale = 0;
+        GameOver?.Invoke();
     }
 }
