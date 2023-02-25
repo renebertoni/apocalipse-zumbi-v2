@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerHealth))]
 public class PlayerInputs : MonoBehaviour
 {
-    public static Action OnShoot;
+    public static Action Shoot;
+    public static Action Flashlight;
     public static Action<Vector2> Move;
     public static Action<Vector2> Rotate;
 
-    public InputActionReference Movement, Shoot, PointerPosition;
+    public InputActionReference MovementInput, ShootInput, PointerPosition, FlashlightInput;
     PlayerHealth _playerHealth;
 
     void Awake()
@@ -19,12 +20,15 @@ public class PlayerInputs : MonoBehaviour
 
     void OnEnable()
     {
-        Shoot.action.performed += LeftMouseClick;
+        ShootInput.action.performed += DoShoot;
+        FlashlightInput.action.performed += SwithFlashlight;
     }
 
     void OnDisable()
     {
-        Shoot.action.performed -= LeftMouseClick;
+        ShootInput.action.performed -= DoShoot;
+        FlashlightInput.action.performed -= SwithFlashlight;
+
     }
 
     void FixedUpdate()
@@ -34,15 +38,20 @@ public class PlayerInputs : MonoBehaviour
 
     void ReadInputs()
     {
-        var inputDirection = Movement.action.ReadValue<Vector2>();
+        var inputDirection = MovementInput.action.ReadValue<Vector2>();
         var inputRotation = PointerPosition.action.ReadValue<Vector2>();
         
         Rotate?.Invoke(inputRotation);
         Move?.Invoke(inputDirection.normalized);
     }
 
-    void LeftMouseClick(InputAction.CallbackContext obj)
+    void DoShoot(InputAction.CallbackContext obj)
     {
-        if(_playerHealth.IsAlive) OnShoot?.Invoke();
+        if(_playerHealth.IsAlive) Shoot?.Invoke();
+    }
+
+    void SwithFlashlight(InputAction.CallbackContext obj)
+    {
+        if(_playerHealth.IsAlive) Flashlight?.Invoke();
     }
 }

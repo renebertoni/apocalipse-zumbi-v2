@@ -10,6 +10,7 @@ public class EnemyMovement : CharacterMovementBase
 
     [SerializeField]
     float _detectionDistance;
+    float _defaultDetectionDistance;
     [SerializeField]
     float _stopDistance;
     [SerializeField]
@@ -26,6 +27,17 @@ public class EnemyMovement : CharacterMovementBase
         _navMesh.speed = Speed;
         _navMesh.stoppingDistance = _stopDistance;
         _targetPosition = PlayerMovement.Position;
+        _defaultDetectionDistance = _detectionDistance;
+    }
+
+    void OnEnable()
+    {
+        Flashlight.TurnOnOff += ChangeDetectionDistance;    
+    }
+
+    void OnDisable()
+    {
+        Flashlight.TurnOnOff -= ChangeDetectionDistance;    
     }
 
     void FixedUpdate ()
@@ -63,6 +75,11 @@ public class EnemyMovement : CharacterMovementBase
                 _timeToFindPosition = 10f;
             }
         }
+    }
+
+    void ChangeDetectionDistance(bool defaultSize)
+    {
+        _detectionDistance = defaultSize ? _defaultDetectionDistance : _detectionDistance * 0.8f;
     }
 
     void OnDrawGizmos()

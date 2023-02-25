@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class WeaponShoot : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     Transform _bulletPoint;
     
@@ -14,15 +14,15 @@ public class WeaponShoot : MonoBehaviour
 
     void OnEnable()
     {
-        PlayerInputs.OnShoot += DoShoot;
+        PlayerInputs.Shoot += OnShoot;
     }
 
     void OnDisable()
     {
-        PlayerInputs.OnShoot -= DoShoot;
+        PlayerInputs.Shoot -= OnShoot;
     }
 
-    void DoShoot()
+    void OnShoot()
     {
         if(_bulletPoint)
         {

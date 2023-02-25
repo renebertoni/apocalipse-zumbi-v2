@@ -17,7 +17,7 @@ public class SpawnHandler : MonoBehaviour
     {
         EnemyHealth.EnemyDead += OnEnemyDead;
         SpawnPoints.SpawnObject += OnSpawnObject;
-        WeaponShoot.SpawnObject += OnSpawnObject;
+        Weapon.SpawnObject += OnSpawnObject;
         EnemyHealth.SpawnObject += OnSpawnObject;
     }
 
@@ -25,7 +25,7 @@ public class SpawnHandler : MonoBehaviour
     {
         EnemyHealth.EnemyDead -= OnEnemyDead;
         SpawnPoints.SpawnObject -= OnSpawnObject;
-        WeaponShoot.SpawnObject -= OnSpawnObject;
+        Weapon.SpawnObject -= OnSpawnObject;
         EnemyHealth.SpawnObject -= OnSpawnObject;
     }
 
