@@ -18,7 +18,7 @@ public class EnemyMovement : CharacterMovementBase
     float _walkAroundDistance = 10f;
     float _timeToFindPosition = 10f;
     float _findPositionTimer;
-    bool _followingPlayer = false;
+    bool _chasing = false;
     Vector3 _targetPosition;
 
     protected override void Awake()
@@ -57,16 +57,20 @@ public class EnemyMovement : CharacterMovementBase
     // TODO MELHORARRRR
     void ChooseTarget()
     {
-        if(Helper.NearTheTarget(transform, _detectionDistance, _targetLayerMask))
+        var closeTargets = Helper.CloseTargets(transform.position, _detectionDistance, _targetLayerMask);
+
+        if(closeTargets.HasCloseTarget)
         {
-            _followingPlayer = true;
-            _targetPosition = PlayerMovement.Position;
+            _chasing = true;
+            _targetPosition = closeTargets.Targets[0].transform.position;
             _navMesh.destination = _targetPosition;
+
+            print(closeTargets.Targets[0].name);
         }
         else
         {
-            if(_followingPlayer) _navMesh.destination = transform.position;
-            _followingPlayer = false;
+            if(_chasing) _navMesh.destination = transform.position;
+            _chasing = false;
 
             _findPositionTimer -= Time.deltaTime;
 

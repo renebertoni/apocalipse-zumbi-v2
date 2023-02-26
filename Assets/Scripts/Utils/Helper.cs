@@ -10,10 +10,13 @@ public class Helper
         return randomPosition;
     }
 
-    public bool NearTheTarget(Transform objTransform, float radius, LayerMask layerMask)
+    public CloseTarget CloseTargets(Vector3 position, float radius, LayerMask layerMask)
     {
-        Collider[] hitColliders = Physics.OverlapSphere(objTransform.position, radius, layerMask);
-        return hitColliders?.Length > 0;
+        Collider[] hitColliders = Physics.OverlapSphere(position, radius, layerMask);
+        var closeTarget = ScriptableObject.CreateInstance<CloseTarget>();
+        closeTarget.CreateCloseTarget(hitColliders, hitColliders.Length > 0);
+
+        return closeTarget;
     }
 
     public int[] TimeConvert(float time)

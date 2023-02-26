@@ -15,6 +15,8 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     float _attackDistance;
     bool _canHit;
+    Helper _helper;
+    CloseTarget _closeTargets;
 
     public static Action<int> Hit;
     public static Action<string> PlayAudio;
@@ -25,9 +27,15 @@ public class EnemyAttack : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    void Start()
+    {
+        _helper = new Helper();
+    }
+
     void FixedUpdate()
     {
-        _canHit = NearTheTarget();
+        _closeTargets = _helper.CloseTargets(transform.position + transform.forward, _attackDistance, _targetLayerMask);
+        _canHit = _closeTargets.HasCloseTarget;
         _animator.SetBool(Constants.ATTACK, _canHit);
     }
 
@@ -39,11 +47,11 @@ public class EnemyAttack : MonoBehaviour
         StartCoroutine(IsAttacking(false, 1f));
     }
 
-    bool NearTheTarget()
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward, _attackDistance, _targetLayerMask);
-        return hitColliders.Length > 0;
-    }
+    // bool NearTheTarget()
+    // {
+    //     Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward, _attackDistance, _targetLayerMask);
+    //     return hitColliders.Length > 0;
+    // }
 
     void OnDrawGizmos()
     {
@@ -53,7 +61,8 @@ public class EnemyAttack : MonoBehaviour
 
     public void DoHit()
     {
-        if(_canHit) Hit?.Invoke(20);
+        if(_canHit) _closeTargets.Targets[0].GetComponent<CharacterHealthBase>().ReceiveDamage(20);
+        // if(_canHit) Hit?.Invoke(20);
     }
 
     IEnumerator IsAttacking(bool status, float timeToWait)
