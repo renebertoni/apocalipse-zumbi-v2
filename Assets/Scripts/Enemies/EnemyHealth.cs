@@ -1,8 +1,10 @@
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
 public class EnemyHealth : CharacterHealthBase
 {
+    // float _timeTODestroy = 6f;
     AudioSource _audioSource;
 
     public static Action EnemyDead;
@@ -20,8 +22,10 @@ public class EnemyHealth : CharacterHealthBase
     {
         EnemyDead?.Invoke();
         InsertAudio?.Invoke(_audioSource);
-
-        Destroy(this.gameObject);
+        _animator.SetInteger(Constants.DIE_ANIMATION, UnityEngine.Random.Range(1,3));
+        _animator.SetTrigger(Constants.DIE);
+        DisableAllComponents();
+        // Destroy(this.gameObject, _timeTODestroy);
     }
 
     void ChosenEnemy()
@@ -38,5 +42,15 @@ public class EnemyHealth : CharacterHealthBase
             SpawnObject?.Invoke(Constants.BLOOD, transform.position, transform.rotation);
             ReceiveDamage(1);
         }
+    }
+
+    void DisableAllComponents()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<AudioSource>().enabled = false;
+        GetComponent<EnemyAttack>().enabled = false;
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<EnemyMovement>().enabled = false;
     }
 }

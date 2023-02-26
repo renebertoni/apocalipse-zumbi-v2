@@ -15,7 +15,7 @@ public class BulletMovement : MonoBehaviour
     void Start()
     {
         PlayAudio?.Invoke(Constants.WEAPON_SHOOT);
-        StartCoroutine(DestroyBullet());
+        Destroy(this.gameObject, lifeTime);
     }
 
     void FixedUpdate()
@@ -28,11 +28,5 @@ public class BulletMovement : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().detectCollisions = false;
         GetComponent<MeshRenderer>().enabled = false;
-    }
-
-    IEnumerator DestroyBullet()
-    {
-        yield return new WaitForSeconds(lifeTime);
-        Destroy(this.gameObject);
     }
 }

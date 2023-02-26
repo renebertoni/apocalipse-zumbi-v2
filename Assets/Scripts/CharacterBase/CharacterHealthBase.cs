@@ -4,6 +4,11 @@ public class CharacterHealthBase : MonoBehaviour, IDamage
 {
     [SerializeField]
     protected int Health;
+    protected Animator _animator;
+
+    protected void Awake() {
+        _animator = GetComponent<Animator>();
+    }
 
     public virtual void ReceiveDamage(int damage)
     {

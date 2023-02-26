@@ -17,6 +17,7 @@ public class EnemyMovement : CharacterMovementBase
     float _easeRotation;
     float _walkAroundDistance = 10f;
     float _timeToFindPosition = 10f;
+    float _findPositionTimer;
     bool _followingPlayer = false;
     Vector3 _targetPosition;
 
@@ -28,6 +29,7 @@ public class EnemyMovement : CharacterMovementBase
         _navMesh.stoppingDistance = _stopDistance;
         _targetPosition = PlayerMovement.Position;
         _defaultDetectionDistance = _detectionDistance;
+        _findPositionTimer = _timeToFindPosition + Random.Range(-1f,1f);
     }
 
     void OnEnable()
@@ -66,13 +68,13 @@ public class EnemyMovement : CharacterMovementBase
             if(_followingPlayer) _navMesh.destination = transform.position;
             _followingPlayer = false;
 
-            _timeToFindPosition -= Time.deltaTime;
+            _findPositionTimer -= Time.deltaTime;
 
-            if(_timeToFindPosition <= 0f)
+            if(_findPositionTimer <= 0f)
             {
                 _targetPosition = Helper.RandomPosition(transform, _walkAroundDistance);
                 _navMesh.destination = _targetPosition;
-                _timeToFindPosition = 10f;
+                _findPositionTimer = _timeToFindPosition + Random.Range(-1f,1f);
             }
         }
     }

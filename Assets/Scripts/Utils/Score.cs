@@ -13,6 +13,6 @@ public class Score
         Time = time;
         Enemies = enemies;
         Survivors = survivors;
-        ScorePoints = time + enemies + survivors;
+        ScorePoints = time + enemies + (survivors * 5);
     }
 }

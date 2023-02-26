@@ -1,6 +1,8 @@
 public class Constants
 {
     public const string ENEMY = "Enemy";
+    public const string DIE = "Die";
+    public const string DIE_ANIMATION = "DieAnimation";
     public const string ATTACK = "Attack";
     public const string BULLET = "Bullet";
     public const string BLOOD = "Blood";

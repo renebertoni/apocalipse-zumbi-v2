@@ -59,6 +59,6 @@ public class EnemyAttack : MonoBehaviour
     IEnumerator IsAttacking(bool status, float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
-        _navMeshAgent.isStopped = status;
+        if(_navMeshAgent.isActiveAndEnabled) _navMeshAgent.isStopped = status;
     }
 }
